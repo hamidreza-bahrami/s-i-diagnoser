@@ -5,14 +5,13 @@ import numpy as np
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
-port_stem = PorterStemmer()
 import time
 from googletrans import Translator
 
+port_stem = PorterStemmer()
 vector = pickle.load(open('vector.pkl', 'rb'))
 load_model = pickle.load(open('model.pkl', 'rb'))
 translator = Translator()
-
 
 def stemming(content):
   con = re.sub('[^a-zA-Z]', ' ', content)
