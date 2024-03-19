@@ -13,6 +13,7 @@ vector = pickle.load(open('vector.pkl', 'rb'))
 load_model = pickle.load(open('model.pkl', 'rb'))
 translator = Translator()
 
+
 def stemming(content):
   con = re.sub('[^a-zA-Z]', ' ', content)
   con = con.lower()
